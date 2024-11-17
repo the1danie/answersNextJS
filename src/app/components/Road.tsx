@@ -3,7 +3,11 @@
 import React from 'react';
 import Image from "next/image";
 import Link from 'next/link'; // Import Link from next/link
-const Road = ({paths}) => {
+interface RoadProps {
+    paths: string[]; // Массив строк
+}
+
+const Road: React.FC<RoadProps> = ({ paths }) => {
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center gap-10 px-4">
             <Link
