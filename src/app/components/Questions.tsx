@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 interface Question {
     question: string;
-    description: string; // Дополнительная информация
+    description?: string; // Сделаем поле необязательным
     answers: string[]; // Варианты ответов
     correctAnswers: number[]; // Индексы правильных ответов в массиве answers
 }
