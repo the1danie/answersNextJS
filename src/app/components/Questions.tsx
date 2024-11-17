@@ -44,18 +44,23 @@ const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
         const correctAnswers = questions[questionIndex].correctAnswers;
         const userAnswers = selectedAnswers[questionIndex];
 
-        const isCorrect = correctAnswers.every((ans) => userAnswers.includes(ans)) && userAnswers.length === correctAnswers.length;
+        if (correctAnswers) { // Проверка на наличие correctAnswers
+            const isCorrect = correctAnswers.every((ans) => userAnswers.includes(ans)) && userAnswers.length === correctAnswers.length;
 
-        if (isCorrect) {
-            setCorrectAnswersCount(prev => prev + 1);
-            setFeedback('Правильный ответ!');
+            if (isCorrect) {
+                setCorrectAnswersCount(prev => prev + 1);
+                setFeedback('Правильный ответ!');
+            } else {
+                setFeedback('Неправильный ответ!');
+            }
         } else {
-            setFeedback('Неправильный ответ!');
+            setFeedback('Правильный ответ не задан для этого вопроса.');
         }
 
         // Скрыть сообщение после 2 секунд
         setTimeout(() => setFeedback(null), 2000);
     };
+
 
     const nextQuestion = () => {
         if (currentQuestionIndex < questions.length - 1) {
