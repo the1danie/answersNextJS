@@ -1,5 +1,5 @@
 import React from 'react';
-import Questions from "@/app/components/Questions";
+import Questions from "@/app/components/Questions_another";
 
 const questionData = [
     {
