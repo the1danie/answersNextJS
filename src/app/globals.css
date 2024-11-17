@@ -2,20 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+    min-height: 100vh; /* Гарантирует, что тело будет занимать хотя бы 100% высоты экрана */
+    margin: 0; /* Убираем стандартные отступы */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    background-image: url('/images/Background.svg'); /* Указываем путь к изображению */
+    background-size: cover; /* Заставляет изображение покрывать весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+nextjs-portal {
+    display: none;
 }
