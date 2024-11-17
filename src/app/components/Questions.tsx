@@ -7,7 +7,7 @@ interface Question {
     question: string;
     description?: string; // Сделаем поле необязательным
     answers: string[]; // Варианты ответов
-    correctAnswers: number[]; // Индексы правильных ответов в массиве answers
+    correctAnswers?: number[]; // Поле теперь необязательное
 }
 
 interface QuestionsProps {
