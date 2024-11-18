@@ -63,7 +63,7 @@ const questionData = [
             "5. Витать в облаках.                Сделать одолжение\n" +
             "6. Выйти сухим из воды.        Забыть\n" +
             "7. Медвежья услуга.                 Обманывать\n" +
-            "8. Точить лясы.                          Все удачно закончилось \n" +
+            "8. Точить лясы.                          Все удачно закончилось \n",
             "1.забыть\n" +
             "2. обманывать\n" +
             "3. все удачно закончилось\n" +
@@ -83,7 +83,7 @@ const questionData = [
 const Page = () => {
     return (
         <div>
-            <Questions num={'третьего'} questions={questionData} link={'/frazelogus'}/>
+            <Questions num={'третий'} questions={questionData} link={'/frazelogus'}/>
 
         </div>
     );

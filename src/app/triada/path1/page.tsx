@@ -146,7 +146,7 @@ const questionData = [
 const Page = () => {
     return (
         <div>
-            <Questions num={'первого'} questions={questionData} link={'/triada'}/>
+            <Questions num={'первый'} questions={questionData} link={'/triada'}/>
 
         </div>
     );

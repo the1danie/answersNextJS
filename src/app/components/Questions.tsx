@@ -86,7 +86,7 @@ const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
 
     return (
         <div className="flex flex-col justify-start items-center">
-            <h1 className="mt-4 text-white text-5xl font-bold uppercase text-center">Теоритический уровень {num} порядка</h1>
+            <h1 className="mt-4 text-white text-5xl font-bold uppercase text-center">Путь {num}</h1>
             <div className="h-screen flex items-center justify-center">
                 <div className="flex flex-col justify-start items-start bg-contain bg-center bg-no-repeat w-[1200px] h-[750px]" style={{ backgroundImage: "url('/images/image.svg')" }}>
                     {/* Отображение текущего вопроса */}
@@ -133,7 +133,7 @@ const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
                                 Предыдущий вопрос
                             </button>
                             {currentQuestionIndex === questions.length - 1 ? (
-                                num === "пятого" ? (
+                                num === "пятый" ? (
                                     <Link href={link}>
                                         <button className="bg-red-500 text-white py-4 px-8 rounded-md hover:bg-red-600">
                                             Завершить тест

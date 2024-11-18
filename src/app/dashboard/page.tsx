@@ -41,10 +41,7 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div className="flex flex-row justify-between items-center p-20"> {/* Контейнер для кнопки и текста */}
-                <h1 className="text-white font-monBold text-3xl">
-                    РАЗДЕЛ НАЧАЛО
-                </h1>
+            <div className="flex flex-row justify-end items-center p-20"> {/* Контейнер для кнопки и текста */}
                 <Link href="../planet"
                       className="px-9 py-6 bg-blue-500 text-white rounded-lg text-3xl hover:bg-blue-600 transition-colors mb-4">
                     Перейти на следующую страницу
