@@ -8,6 +8,7 @@ interface Question {
     description?: string; // Сделаем поле необязательным
     answers: string[]; // Варианты ответов
     correctAnswers?: number[]; // Поле теперь необязательное
+    size?: string,
 }
 
 interface QuestionsProps {
@@ -16,7 +17,7 @@ interface QuestionsProps {
     link: string
 }
 
-const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
+const Questions: React.FC<QuestionsProps> = ({ num, questions, link, size}) => {
 
     // Состояние для текущего вопроса
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -91,7 +92,8 @@ const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
                 <div className="flex flex-col justify-start items-start bg-contain bg-center bg-no-repeat w-[1200px] h-[750px]" style={{ backgroundImage: "url('/images/image.svg')" }}>
                     {/* Отображение текущего вопроса */}
                     <div id={`question-${currentQuestionIndex}`} key={currentQuestionIndex} className="mt-28 ml-20">
-                        <p className="text-black font-monSemiBold text-3xl">{questions[currentQuestionIndex].question}</p>
+                        <p     className={`text-black font-monSemiBold ${questions[currentQuestionIndex].size || 'text-3xl'}`}
+                        >{questions[currentQuestionIndex].question}</p>
 
                         <div className="flex flex-col pr-12">
                             {questions[currentQuestionIndex].answers.map((answer, answerIndex) => (
