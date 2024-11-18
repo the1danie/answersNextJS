@@ -33,7 +33,7 @@ export default function Home() {
 
                 <div className="w-full sm:w-96 md:w-[900px] lg:w-[900px]">
                     <Image
-                        src="/images/TextWithIcon.svg"
+                        src="/images/newc.svg"
                         alt='Icon'
                         width={450}
                         height={450}
