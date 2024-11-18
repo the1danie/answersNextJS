@@ -17,7 +17,7 @@ interface QuestionsProps {
     link: string
 }
 
-const Questions: React.FC<QuestionsProps> = ({ num, questions, link, size}) => {
+const Questions: React.FC<QuestionsProps> = ({ num, questions, link}) => {
 
     // Состояние для текущего вопроса
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
